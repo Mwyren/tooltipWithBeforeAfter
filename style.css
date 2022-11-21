@@ -1,0 +1,53 @@
+body{
+  background-color: rgba(0,0,0,0.4);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.btn{
+  position: relative;
+  display: block;
+  margin: 300px auto;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: #3d7f69;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn::after{
+  display: block;
+  content: 'The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript.';
+  position: absolute;
+  width: 230px;
+  top: -184px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
+  opacity: 0.8;
+  padding: 15px;
+  visibility: hidden;
+}
+
+.btn::before{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 20px solid #000;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  opacity: 0.8;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -26px;
+  visibility: hidden;
+}
+
+.btn:hover::after,
+.btn:hover::before{
+  visibility: visible;
+}
+
